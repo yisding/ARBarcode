@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
+        // TODO unfortunately even though this is Apple provided boilerplate it doesn't work completely full screen on new phones.
+        // https://github.com/SwiftUIX/SwiftUIX/blob/master/Sources/Intermodular/Helpers/UIKit/UIHostingView.swift
+        // https://twitter.com/b3ll/status/1193747288302075906?lang=en
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = UIHostingController(rootView: contentView)
         self.window = window

@@ -7,35 +7,25 @@
 
 import SwiftUI
 import RealityKit
+import Vision
+import ARKit
 
-struct ContentView : View {
+struct ContentView: View {
+    @State var scannedBarcodes: [ Barcode ] = []
+//        Barcode(barcodeString: "ABCDEFG"),
+//        Barcode(barcodeString: "HIJKLMN")
+    
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+//            Text("Hello").tabItem { Text("Hello" )}.tag(1)
+            ARViewContainer(scannedBarcodes: $scannedBarcodes).edgesIgnoringSafeArea(.all).tabItem { Text("Scan Barcodes") }.tag(1)
+            ScannedRecords(scannedBarcodes: $scannedBarcodes).tabItem { Text("Already Scanned") }.tag(2)
+        }.ignoresSafeArea()
     }
 }
-
-struct ARViewContainer: UIViewRepresentable {
     
-    func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
-    }
-    
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
-}
-
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

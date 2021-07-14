@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19804801269E9FFC00670B2B /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19804800269E9FFC00670B2B /* ARViewContainer.swift */; };
+		19804807269EA0C100670B2B /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19804806269EA0C100670B2B /* Barcode.swift */; };
+		19804809269EA42600670B2B /* ScannedRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19804808269EA42600670B2B /* ScannedRecords.swift */; };
 		19C4D518269DCEDF000AA6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4D517269DCEDF000AA6AF /* AppDelegate.swift */; };
 		19C4D51A269DCEDF000AA6AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4D519269DCEDF000AA6AF /* ContentView.swift */; };
 		19C4D51C269DCEDF000AA6AF /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 19C4D51B269DCEDF000AA6AF /* Experience.rcproject */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19804800269E9FFC00670B2B /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		19804806269EA0C100670B2B /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		19804808269EA42600670B2B /* ScannedRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedRecords.swift; sourceTree = "<group>"; };
 		19C4D514269DCEDF000AA6AF /* ARBarcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBarcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C4D517269DCEDF000AA6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19C4D519269DCEDF000AA6AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				19C4D51D269DCEE3000AA6AF /* Assets.xcassets */,
 				19C4D522269DCEE3000AA6AF /* Info.plist */,
 				19C4D51F269DCEE3000AA6AF /* Preview Content */,
+				19804800269E9FFC00670B2B /* ARViewContainer.swift */,
+				19804806269EA0C100670B2B /* Barcode.swift */,
+				19804808269EA42600670B2B /* ScannedRecords.swift */,
 			);
 			path = ARBarcode;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19804807269EA0C100670B2B /* Barcode.swift in Sources */,
+				19804809269EA42600670B2B /* ScannedRecords.swift in Sources */,
 				19C4D51A269DCEDF000AA6AF /* ContentView.swift in Sources */,
+				19804801269E9FFC00670B2B /* ARViewContainer.swift in Sources */,
 				19C4D518269DCEDF000AA6AF /* AppDelegate.swift in Sources */,
 				19C4D51C269DCEDF000AA6AF /* Experience.rcproject in Sources */,
 			);
