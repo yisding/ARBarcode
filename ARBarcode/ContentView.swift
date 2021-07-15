@@ -18,8 +18,14 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
 //            Text("Hello").tabItem { Text("Hello" )}.tag(1)
-            ARViewContainer(scannedBarcodes: $scannedBarcodes).edgesIgnoringSafeArea(.all).tabItem { Text("Scan Barcodes") }.tag(1)
-            ScannedRecords(scannedBarcodes: $scannedBarcodes).tabItem { Text("Already Scanned") }.tag(2)
+            ARViewContainer(scannedBarcodes: $scannedBarcodes).edgesIgnoringSafeArea(.all).tabItem {
+                Image(systemName: "barcode.viewfinder")
+                Text("Scan Barcodes")
+            }.tag(1)
+            ScannedRecords(scannedBarcodes: $scannedBarcodes).tabItem {
+                Image(systemName: "list.dash")
+                Text("Already Scanned")
+            }.tag(2)
         }.ignoresSafeArea()
     }
 }
